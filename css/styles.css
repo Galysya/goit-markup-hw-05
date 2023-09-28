@@ -732,12 +732,14 @@ border: 1px solid #4D5AE5;
 }
 .modal-form-comment{
     position: relative;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     color: var(--LIGHT-SLATE, #8E8F99);
 font-family: Roboto;
 font-size: 12px;
-line-height: 14px; 
 letter-spacing: 0.48px;
+margin-bottom: 4px;
+display: block;
+line-height: 1.17; 
 }
 .form-textarea{
     border-radius: 4px;
