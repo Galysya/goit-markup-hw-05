@@ -468,7 +468,7 @@ padding-top: 96px;
     background-color: #fcfcfc; 
 transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
-padding: 24px 24px 24px 24px;
+padding: 72px 24px 24px 24px;;
 }
 .modal-close{
 position: absolute;
@@ -722,7 +722,6 @@ border: 1px solid #4D5AE5;
     position: absolute;
     left: 16px;
     top: 50%;
-    fill: transparent;
     stroke: var(--NAVYBLUEmodal);
     transform: translateY(-50%); 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -758,7 +757,7 @@ letter-spacing: 0.48px;
     padding: 8px 16px;
     outline: transparent;
     background-color: transparent;
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .form-textarea:focus-within{
@@ -782,6 +781,7 @@ fill: transparent;
     border: none;
     fill: var(--CLOUD)
 }
+
 .checkbox-modal{
     margin-bottom: 24px;
 }
@@ -795,7 +795,7 @@ display: block;
 }
 
 .policy{
-color: var(--IRIS);
+color: var(--IRIS #4d5ae5);
 font-family: Roboto;
 font-size: 12px;
 line-height: 16px;
@@ -880,10 +880,11 @@ margin-bottom: 16px;
     line-height: 1.5; 
     letter-spacing: 0.04em;
     margin-left: 24px;
-    max-width: 165px;
     height: 40px;
     cursor: pointer;
     border: none;
+    min-width: 165px; 
+    font-family: "Roboto", sans-serif;
 }
 .foot-form-icon{
     fill: var(--WHITE);
