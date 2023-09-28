@@ -732,7 +732,7 @@ border: 1px solid #4D5AE5;
 }
 .modal-form-comment{
     position: relative;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     color: var(--LIGHT-SLATE, #8E8F99);
 font-family: Roboto;
 font-size: 12px;
