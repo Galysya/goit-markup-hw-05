@@ -684,23 +684,33 @@ font-weight: 500;
 line-height: 24px; 
 letter-spacing: 0.02em;
 padding: 72px 24px 16px;
+margin-bottom: 16px;
 }
 .modal-label{
     color: var(--LIGHT-SLATE, #8E8F99);
 font-family: Roboto;
 font-size: 12px;
-line-height: 14px; 
 letter-spacing: 0.48px;
 margin-bottom: 4px;
 display: block;
+line-height: 1.17; 
+}
+.modal-field{
+    position: relative;
 }
 .modal-input{
     padding: 11px 16px 11px 34px;
     width: 360px;
+    width: 100%;
+    height: 40px;
     border-radius: 4px;
 border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
 position: relative;
 outline: transparent;
+background-color: transparent;
+padding-left: 38px;
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+
 }
 .modal-input:focus-within{
 border: 1px solid #4D5AE5;
@@ -714,10 +724,13 @@ border: 1px solid #4D5AE5;
     top: 50%;
     fill: transparent;
     stroke: var(--NAVYBLUEmodal);
+    transform: translateY(-50%); 
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form{
     position: relative;
     margin-bottom: 8px;
+
 }
 .modal-form-comment{
     position: relative;
@@ -732,18 +745,21 @@ letter-spacing: 0.48px;
 }
 .form-textarea{
     border-radius: 4px;
-    border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+    border-color: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
     max-width: 360px;
     width: 100%;
     resize: none;
-    min-height: 120px;
+    height: 120px;
     color: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
     font-family: Roboto;
     font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 0.48px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
     padding: 8px 16px;
     outline: transparent;
+    background-color: transparent;
+    border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .form-textarea:focus-within{
     border: 1px solid #4D5AE5;
@@ -752,24 +768,30 @@ letter-spacing: 0.48px;
     width: 16px;
     height: 16px;
     stroke-width: 1px;
-stroke: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
-display: flex;
+border: 1px solid rgba(46, 47, 66, 0.4);
+display: inline-flex; 
 align-items: center;
 justify-content: center;
-
+border-radius: 2px; 
 margin-right: 8px;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+fill: transparent;
 }
 .checkbox-modal:checked + .accept > .modal-span{
     background-color: var(--okean);
     border: none;
+    fill: var(--CLOUD)
+}
+.checkbox-modal{
+    margin-bottom: 24px;
 }
 .accept{
     color: var(--LIGHT-SLATE, #8E8F99);
 font-family: Roboto;
 font-size: 12px;
-line-height: 14px;
+line-height: 1.17; 
 letter-spacing: 0.48px;
-display: flex;
+display: block;
 }
 
 .policy{
@@ -783,7 +805,7 @@ margin-left: 4px;
 }
 
 .btn-modal-send{
-    display: inline-flex;
+    display: block;
 padding: 16px 32px;
 align-items: flex-start;
 gap: 10px;
@@ -792,11 +814,40 @@ background-color: var(--IRIS, #4D5AE5);
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 color: white;
 cursor: pointer;
+min-width: 169px;
+height: 56px;
+font-family: "Roboto", sans-serif;
+font-weight: 500;
+line-height: 1.5;
+letter-spacing: 0.04em;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+border: none;
 }
 
-
+.foot-form{
+    display: flex;
+    gap: 24px;
+}
 .foot-modal-form{
     margin-left: 80px;
+}
+.foot-email{
+    width: 264px;
+    height: 40px; 
+    border-radius: 4px;
+border: 1px solid var(--WHITE, #FFF);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+background-color: transparent;
+color: white;
+font-family: Roboto;
+font-size: 12px;
+font-weight: 400;
+line-height: 1.5; 
+letter-spacing: 0.04em;
+padding-left: 16px;
+}
+.required .placeholder{
+    color: WHITE;
 }
 .foot-form-title{
     color: var(--WHITE);
@@ -805,31 +856,35 @@ font-size: 16px;
 font-weight: 500;
 line-height: 24px; 
 letter-spacing: 0.02em;
+margin-bottom: 16px;
 }
 
 .foot-button{
-    display: inline-flex;
+    display:flex;
     padding: 8px 24px;
     justify-content: center;
     align-items: center;
     gap: 16px;
     border-radius: 4px;
-    background: var(--IRIS, #4D5AE5);
+    background-color: #4D5AE5;
     cursor: pointer;
-    color: var(--WHITE, #FFF);
+    color: white;
     text-align: center;
     font-family: Roboto;
     font-size: 16px;
     font-weight: 500;
-    line-height: 24px; 
-    letter-spacing: 0.64px;
+    line-height: 1.5; 
+    letter-spacing: 0.04em;
     margin-left: 24px;
-    width: 165px;
+    max-width: 165px;
     height: 40px;
-    padding: 8px 24px;
+    cursor: pointer;
+    border: none;
 }
 .foot-form-icon{
     fill: var(--WHITE);
+    margin-left: 16px;
+
 }
 
     
