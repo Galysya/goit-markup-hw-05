@@ -722,7 +722,6 @@ border: 1px solid #4D5AE5;
     position: absolute;
     left: 16px;
     top: 50%;
-    stroke: var(--NAVYBLUEmodal);
     transform: translateY(-50%); 
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -734,8 +733,6 @@ border: 1px solid #4D5AE5;
 .modal-form-comment{
     position: relative;
     margin-bottom: 16px;
-}
-.textarea-label{
     color: var(--LIGHT-SLATE, #8E8F99);
 font-family: Roboto;
 font-size: 12px;
@@ -795,7 +792,7 @@ display: block;
 }
 
 .policy{
-color: var(--IRIS #4d5ae5);
+color: var(--IRIS);
 font-family: Roboto;
 font-size: 12px;
 line-height: 16px;
